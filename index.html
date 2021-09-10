@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
 	</head>
 	<body>
@@ -16,10 +18,10 @@
 <script type="text/javascript">
 	var ws = new WebSocket("ws://127.0.0.1:2345");
 	ws.onopen = function() {
-		console.log("杩炴帴鎴愬姛");
+		console.log("连接成功")
 	};
 	ws.onmessage = function(e) {
-		alert(e.data)
+		console.log(e.data)
 	};
 
 	const app = new Vue({
@@ -27,7 +29,7 @@
 		data() {
 			return {
 				msee: "",
-				serveMsee:""
+				serveMsee: ""
 			}
 		},
 		created() {
@@ -36,7 +38,7 @@
 		methods: {
 			go() {
 				// ws.send(this.msee + 'KEY:gi4lXpAOw6ddtFg');
-        ws.send(this.msee)
+				ws.send(this.msee)
 			}
 		}
 	})
