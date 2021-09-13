@@ -1,0 +1,169 @@
+2021-09-13 10:29:05 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(stdClass), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(39): Workerman\Connection\TcpConnection->send(Object(stdClass))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(65): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:29:23 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(stdClass), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(39): Workerman\Connection\TcpConnection->send(Object(stdClass))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(65): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:50:09 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(stdClass), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(39): Workerman\Connection\TcpConnection->send(Object(stdClass))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(65): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:52:27 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(Obj), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(39): Workerman\Connection\TcpConnection->send(Object(Obj))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(69): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:52:45 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(Obj), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(45): Workerman\Connection\TcpConnection->send(Object(Obj))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(71): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:53:05 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(Obj), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(45): Workerman\Connection\TcpConnection->send(Object(Obj))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(71): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:53:50 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(stdClass), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(40): Workerman\Connection\TcpConnection->send(Object(stdClass))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(66): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:54:56 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(Counts), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(44): Workerman\Connection\TcpConnection->send(Object(Counts))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(70): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:55:15 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(object) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Object(Counts), Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(44): Workerman\Connection\TcpConnection->send(Object(Counts))
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(70): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:56:21 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(array) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(45): Workerman\Connection\TcpConnection->send(Array)
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(71): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:56:48 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(array) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(45): Workerman\Connection\TcpConnection->send(Array)
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(71): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:56:53 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(array) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(45): Workerman\Connection\TcpConnection->send(Array)
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(71): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"
+2021-09-13 10:57:24 pid:1 Worker process terminated with ERROR: E_ERROR "Uncaught Exception: You can't send(array) to client, you need to convert it to a string.  in F:\scoket\workerman\Protocols\Websocket.php:236
+Stack trace:
+#0 F:\scoket\workerman\Connection\TcpConnection.php(321): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 F:\scoket\ws_test.php(45): Workerman\Connection\TcpConnection->send(Array)
+#2 F:\scoket\workerman\Events\Select.php(232): {closure}()
+#3 F:\scoket\workerman\Events\Select.php(281): Workerman\Events\Select->tick()
+#4 F:\scoket\workerman\Worker.php(2430): Workerman\Events\Select->loop()
+#5 F:\scoket\workerman\Worker.php(1417): Workerman\Worker->run()
+#6 F:\scoket\workerman\Worker.php(1360): Workerman\Worker::forkWorkersForWindows()
+#7 F:\scoket\workerman\Worker.php(542): Workerman\Worker::forkWorkers()
+#8 F:\scoket\ws_test.php(71): Workerman\Worker::runAll()
+#9 {main}
+  thrown in F:\scoket\workerman\Protocols\Websocket.php on line 236"

@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- 引入组件库 -->
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,37 +13,155 @@
 	</head>
 	<body>
 		<div id="app">
-			<input type="text" v-model="msee">
-			<button @click="go">scoket</button>
+			<div class="text-box">
+				<div v-for="item,index in serveMsee">{{item.name}}:{{item.text}}</div>
+			</div>
+			<el-row>
+				<input style="    background-color: #FFF;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #DCDFE6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;" type="text" v-model="msee" placeholder="请输入内容" @keyup.enter="go">
+				<!-- <el-input v-model="msee" placeholder="请输入内容"  @keyup.enter="go"></el-input> -->
+				<div style="display: flex;justify-content: space-between;align-items: center;margin-top: 10px;">
+					在线人数:{{count}}
+					<el-button type="primary" @click="go">发送消息</el-button>
+				</div>
+
+
+			</el-row>
 		</div>
 	</body>
 </html>
 
 <script type="text/javascript">
-	var ws = new WebSocket("ws://127.0.0.1:2345");
-	ws.onopen = function() {
-		console.log("���ӳɹ�")
-	};
-	ws.onmessage = function(e) {
-		console.log(e.data)
-	};
-
+	var ws;
 	const app = new Vue({
 		el: "#app",
 		data() {
 			return {
+				count: 0,
 				msee: "",
-				serveMsee: ""
+				serveMsee: [],
+				name: ""
 			}
 		},
 		created() {
 
+			if (localStorage.getItem('name')) {
+				this.name = localStorage.getItem('name')
+				
+				ws = new WebSocket("ws://mc1249.e2.luyouxia.net:23712");
+				
+				ws.onerror = () => {
+					this.$message.error('服务器连接失败');
+				}
+				
+				ws.onopen = function() {
+					app.$message({
+						message: '连接服务器成功',
+						type: 'success'
+					});
+				};
+				ws.onmessage = function(e) {
+					// console.log()
+					var json = (new Function("return " + e.data))();
+					// console.log(json)
+				
+					if (json.type == 'count') {
+						app.count = json.count
+					} else {
+						app.serveMsee.push(json)
+						console.log('serveMsee', app.serveMsee)
+					}
+				};
+				
+			} else {
+				localStorage.setItem('name', this.name)
+				this.$prompt('请输入姓名', '提示', {
+					confirmButtonText: '确定',
+					showClose: false,
+					closeOnPressEscape: false,
+					closeOnClickModal: false,
+					cancelButtonText: '游客登录',
+				}).then(({
+					value
+				}) => {
+					localStorage.setItem('name', this.name)
+					this.name = value
+				}).catch(() => {
+					localStorage.setItem('name', this.name)
+					this.name = ""
+				}).then(() => {
+
+					ws = new WebSocket("ws://mc1249.e2.luyouxia.net:23712");
+
+					ws.onerror = () => {
+						this.$message.error('服务器连接失败');
+					}
+
+					ws.onopen = function() {
+						app.$message({
+							message: '连接服务器成功',
+							type: 'success'
+						});
+					};
+					ws.onmessage = function(e) {
+						// console.log()
+						var json = (new Function("return " + e.data))();
+						// console.log(json)
+
+						if (json.type == 'count') {
+							app.count = json.count
+						} else {
+							app.serveMsee.push(json)
+							console.log('serveMsee', app.serveMsee)
+						}
+					};
+				});
+
+			}
 		},
 		methods: {
 			go() {
 				// ws.send(this.msee + 'KEY:gi4lXpAOw6ddtFg');
-				ws.send(this.msee)
+				ws.send(this.msee + 'name:' + this.name)
+				this.msee = ""
 			}
 		}
 	})
 </script>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	#app {
+		max-width: 400px;
+		margin: auto;
+	}
+
+	.text-box {
+		margin: 50px 0;
+		padding: 10px;
+		box-sizing: border-box;
+		border: 1px solid #DCDFE6;
+		border-radius: 10px;
+		height: 500px;
+	}
+
+	.text-box div {
+		margin-bottom: 10px;
+		color: gray;
+	}
+</style>
