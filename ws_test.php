@@ -46,7 +46,7 @@ $http_worker->onWorkerStart = function ($worker) {
 };
 
 // 关闭连接时减掉在线人数
-$http_worker->onClose = function ($connection) {
+$http_worker->onClose = function ($connection) use ($http_worker) {
     global $connection_count;
     $connection_count--;
 	
