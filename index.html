@@ -59,7 +59,7 @@
 			if (localStorage.getItem('name')) {
 				this.name = localStorage.getItem('name')
 				
-				ws = new WebSocket("ws://mc1249.e2.luyouxia.net:23712");
+				ws = new WebSocket("ws://127.0.0.1:2345");
 				
 				ws.onerror = () => {
 					this.$message.error('服务器连接失败');
@@ -102,7 +102,7 @@
 					this.name = ""
 				}).then(() => {
 
-					ws = new WebSocket("ws://mc1249.e2.luyouxia.net:23712");
+					ws = new WebSocket("ws://127.0.0.1:2345");
 
 					ws.onerror = () => {
 						this.$message.error('服务器连接失败');
